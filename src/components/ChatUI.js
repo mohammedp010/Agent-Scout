@@ -53,7 +53,7 @@ function ChatUI() {
       // Determine the API endpoint based on presence of query params
       const apiEndpoint = playerId
         ? `/player/state-by-id?id=${playerId}&prompt=${encodeURIComponent(trimmedPrompt)}`
-        : '/player';
+        : '/player?prompt=' + encodeURIComponent(trimmedPrompt);
 
       // Make the API call using ApiService
       const response = await ApiService.get(apiEndpoint, {
