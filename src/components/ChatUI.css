@@ -1,0 +1,235 @@
+.chat-ui-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  /* background-color: var(--background-color, #121212); */
+  min-height: 100vh;
+  color: var(--text-color, #ffffff);
+}
+
+.predefined-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.prompt-button {
+  background-color: #53212b ;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-button:hover {
+  background-color: #3b171e;
+}
+
+.chat-window {
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
+  /* Fallback */
+  background-color: #53212b;
+  
+  /* Transparent background and blur effect */
+  background-color: rgba(83, 33, 43, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto;
+  margin-bottom: 80px; /* To prevent overlap with the input box */
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-wrap; /* Preserves whitespace and line breaks */
+}
+
+.user-message {
+  background-color: #bd3934;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.ai-message {
+  background-color: #e5e5ea;
+  color: black;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.prompt-form {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 800px;
+  position: fixed;
+  bottom: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.prompt-textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  max-height: 150px;
+  overflow-y: auto;
+  outline: none;
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.prompt-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between elements */
+  width: 100%;
+}
+
+.context-box {
+  background-color: var(--primary-color, #2c3e50);
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.textarea-button-group {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px; /* Space between textarea and button */
+  width: 100%;
+}
+
+.prompt-textarea {
+  flex: 1;
+  resize: none;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  max-height: 150px;
+  overflow-y: auto;
+  outline: none;
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.send-button {
+  background-color: #fff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.send-button:hover {
+  background-color: #3b171e;
+}
+
+.send-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.send-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.context-box {
+  background-color: var(--primary-color, #2c3e50);
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  .context-box {
+    font-size: 0.9rem;
+  }
+
+  .prompt-textarea {
+    font-size: 0.9rem;
+  }
+
+  .send-button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .prompt-button {
+    width: 150px;
+    height: 80px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .chat-window {
+    margin-bottom: 70px; /* Adjusted to accommodate context-box */
+  }
+
+  .textarea-button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .send-button {
+    width: 100%;
+    height: 50px;
+  }
+}

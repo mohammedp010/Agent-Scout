@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Iceland&display=swap");
+.prompts-container,
+.prompts-container h2,
+.prompts-container .prompt-item {
+  font-family: "Iceland", sans-serif;
+}
+
+.prompts-container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.prompts-container h2 {
+  margin-bottom: 15px;
+}
+
+.prompt-item {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.prompt-item:hover {
+  color: #61dafb;
+}
+
+.predefined-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.prompt-button {
+  background-color: #53212b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

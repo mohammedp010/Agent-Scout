@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #96b3ce;       /* Navbar and header color */
+  --background-color: #121212;    /* Page background color */
+  --text-color: #ffffff;          /* Default text color */
+  --card-bg: #1e1e1e;             /* Player card background */
+  --data-bar-bg: #34495e;         /* Background of data bars */
+  --data-bar-fill: #2ecc71;       /* Fill color of data bars */
+  --border-color: #333333;        /* Table border color */
+  --header-text: #ffffff;         /* Header text color */
+  --row-even: #2c2c2c;            /* Even row background */
+  --row-hover: #34495e;           /* Row hover background */
+  /* Add more variables as needed */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }

@@ -1,13 +1,44 @@
+/* Ensure no @import here since we're using <link> in index.html */
+
+/* Apply the global font to the entire application */
 body {
+  font-family: "Iceland", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+
+  /* text-align: center; */
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  /* Background Image Settings */
+  background-image: url('/public/bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative; /* To position the overlay correctly */
+
+  /* Add Box Shadow */
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Ensure the App content stays above the background */
+  /* Add any other global styles here */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::before {
+  content: '';
+  position: fixed; /* Ensures the overlay stays fixed with the background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: -1; /* Places the overlay behind the App content */
+}
+
+/* Optional: Set the font on html as well for better coverage */
+html {
+  font-family: "Iceland", sans-serif;
 }
